@@ -8,6 +8,10 @@ A simple scraper to extract all Google reviews for the business
 > source venv/Scripts/activate
 > pip install -r requirements.txt
 ```
+- Run the following from your terminal to set system environment variables
+```
+> export SQLALCHEMY_DATABASE_URI=postgresql://postgres:root@localhost:5432/reviews
+```
 - DB migration 
 ```
 > python manage.py db init
