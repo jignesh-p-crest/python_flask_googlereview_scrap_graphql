@@ -36,7 +36,7 @@ A simple scraper to extract all Google reviews for the business
 
 - RESTful API Endpoints for reviews
   - To get all reviews : GET - /api/v1/reviews
-  - To get review details: GET - /api/v1/reviews/<id>  
+  - To get review details: GET - /api/v1/reviews/:id
   - To create new review: POST - /api/v1/reviews/
       ```
        {
@@ -46,7 +46,7 @@ A simple scraper to extract all Google reviews for the business
         "reviewer_name": "Test Reviewr"
       }
     ```
-  - To update review: PUT -  /api/v1/reviews/<id>
+  - To update review: PUT -  /api/v1/reviews/:id
      ```
        {
         "rating": 4,
@@ -55,7 +55,7 @@ A simple scraper to extract all Google reviews for the business
         "reviewer_name": "Test Reviewr"
       }
     ```
-  - To delete the review DELETE: /api/v1/reviews/<id>
+  - To delete the review DELETE: /api/v1/reviews/:id
 
 - GraphQL API endpoint: http://127.0.0.1:5000/graphql-api
     - To get all reviews :
