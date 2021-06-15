@@ -1,13 +1,17 @@
+import os
 from selenium import webdriver
 import time
 from selenium.webdriver.firefox.options import Options
 
-options = Options()
-options.add_argument("--headless")
+
 SCRAP_URL='https://www.google.com/search?q=bmw+of+austin#lrd=0x8644cd1fdca503e1:0x49fed3597ce3a823,1,,,'
 def fetchGoogleReview():
 	print("Scapping start.......")
-	driver =  webdriver.Chrome(executable_path='./driver/geckodriver', options=options)
+	options = Options()
+	options.add_argument("--headless")
+	file_path = os.path.dirname(os.path.realpath(__file__))
+	driver_path = os.path.join(file_path, "..", "..", "..", "driver", "geckodriver")
+	driver = webdriver.Chrome(driver_path, options=options)
 	driver.get(SCRAP_URL)
 	time.sleep(5)
 	scap_data = []
