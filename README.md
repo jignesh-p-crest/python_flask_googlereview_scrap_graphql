@@ -35,7 +35,7 @@ A simple scraper to extract all Google reviews for the business
 ```
 
 - RESTful API Endpoints for reviews
-  - To get alll reviews : GET - /api/v1/reviews
+  - To get all reviews : GET - /api/v1/reviews
   - To get review details: GET - /api/v1/reviews/<id>  
   - To create new review: POST - /api/v1/reviews/
       ```
@@ -56,3 +56,19 @@ A simple scraper to extract all Google reviews for the business
       }
     ```
   - To delete the review DELETE: /api/v1/reviews/<id>
+
+- GraphQL API endpoint: http://127.0.0.1:5000/graphql-api
+    - To get all reviews :
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/reviews.PNG)
+
+    - To get review by Id :
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/reviews_by_id.PNG)
+
+    - To create new review :
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/create_review.PNG)
+
+    - To get update review :
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/update_reveiw.PNG)
+
+    - To get delete review :
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/delete_review.PNG)
