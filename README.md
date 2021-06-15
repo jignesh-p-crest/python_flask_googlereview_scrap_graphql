@@ -8,6 +8,10 @@ A simple scraper to extract all Google reviews for the business
 > source venv/Scripts/activate
 > pip install -r requirements.txt
 ```
+- Run the following from your terminal to set system environment variables
+```
+> export SQLALCHEMY_DATABASE_URI=postgresql://postgres:root@localhost:5432/reviews
+```
 - DB migration 
 ```
 > python manage.py db init
@@ -25,7 +29,7 @@ A simple scraper to extract all Google reviews for the business
 ```
 > Open the following url on your browser: http://127.0.0.1:5000/
 ```
-![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/web_page.PNG)
+![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/web_page.PNG)
 
 
 - To run unit test
@@ -36,7 +40,7 @@ A simple scraper to extract all Google reviews for the business
 
 - RESTful API Endpoints for reviews
   - To get all reviews : GET - /api/v1/reviews
-  - To get review details: GET - /api/v1/reviews/<id>  
+  - To get review details: GET - /api/v1/reviews/:id
   - To create new review: POST - /api/v1/reviews/
       ```
        {
@@ -46,7 +50,7 @@ A simple scraper to extract all Google reviews for the business
         "reviewer_name": "Test Reviewr"
       }
     ```
-  - To update review: PUT -  /api/v1/reviews/<id>
+  - To update review: PUT -  /api/v1/reviews/:id
      ```
        {
         "rating": 4,
@@ -55,20 +59,20 @@ A simple scraper to extract all Google reviews for the business
         "reviewer_name": "Test Reviewr"
       }
     ```
-  - To delete the review DELETE: /api/v1/reviews/<id>
+  - To delete the review DELETE: /api/v1/reviews/:id
 
 - GraphQL API endpoint: http://127.0.0.1:5000/graphql-api
     - To get all reviews :
-    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/reviews.PNG)
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/reviews.PNG)
 
     - To get review by Id :
-    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/reviews_by_id.PNG)
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/reviews_by_id.PNG)
 
     - To create new review :
-    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/create_review.PNG)
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/create_review.PNG)
 
     - To get update review :
-    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/update_reveiw.PNG)
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/update_reveiw.PNG)
 
     - To get delete review :
-    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap/master/static/delete_review.PNG)
+    ![image](https://raw.github.com/jignesh-p-crest/python_flask_googlereview_scrap_graphql/master/static/delete_review.PNG)
